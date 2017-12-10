@@ -1,8 +1,8 @@
 package rooms;
 
 public enum BedroomValue {
-    DOUBLE(1, 50),
-    SINGLE(2, 80);
+    DOUBLE(2, 80),
+    SINGLE(1, 50);
 
     private int capacity;
     private int cost;
