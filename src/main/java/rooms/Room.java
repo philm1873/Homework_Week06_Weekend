@@ -1,14 +1,18 @@
 package rooms;
 
+import java.util.ArrayList;
+
 public class Room {
-    int roomNumber;
-    int capacity;
-    int cost;
+    private int roomNumber;
+    private int capacity;
+    private int cost;
+    private ArrayList<String> guests;
 
     public Room(int inputRoomNumber, int inputCapacity, int inputCost) {
         this.roomNumber = inputRoomNumber;
         this.capacity = inputCapacity;
         this.cost = inputCost;
+        this.guests = new ArrayList<>();
     }
 
 
@@ -23,4 +27,13 @@ public class Room {
     public int getCost() {
         return cost;
     }
+
+    public ArrayList<String> getGuests() {
+        return guests;
+    }
+
+    public void addGuests(ArrayList<String> inputGuests) {
+        guests.addAll(inputGuests);
+    }
+
 }

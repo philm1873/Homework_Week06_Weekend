@@ -1,4 +1,4 @@
-import hotel.Guest;
+import guest.Guest;
 import org.junit.Before;
 import org.junit.Test;
 import rooms.Bedroom;
@@ -18,6 +18,7 @@ public class BedroomTest {
     private int capacitySingle = BedroomValue.SINGLE.getCapacity();
     private int costDouble = BedroomValue.SINGLE.getCost();
     private int costSingle = BedroomValue.SINGLE.getCost();
+    private Guest testGuest;
 
 
 
@@ -25,17 +26,18 @@ public class BedroomTest {
     public void before() {
         testDoubleBedroom = new Bedroom(5, capacityDouble, costDouble , typeDouble);
         testSingleBedroom = new Bedroom(4, capacitySingle, costSingle, typeSingle);
+        testGuest = new Guest("Phil", 500);
     }
 
     @Test
     public void singleRoomStartsEmpty() {
-        ArrayList<Guest> test = new ArrayList<>();
+        ArrayList<String> test = new ArrayList<>();
         assertEquals(test, testSingleBedroom.getGuests());
     }
 
     @Test
     public void doubleRoomStartsEmpty() {
-        ArrayList<Guest> test = new ArrayList<>();
+        ArrayList<String> test = new ArrayList<>();
         assertEquals(test, testDoubleBedroom.getGuests());
     }
 
@@ -53,6 +55,12 @@ public class BedroomTest {
     public void canGetCost() {
         assertEquals(50, testSingleBedroom.getCost());
     }
+
+//    @Test
+//    public void canAddGuest() {
+//        testDoubleBedroom.addGuests(testGuest);
+//        assertEquals(1, testDoubleBedroom.getGuests().size());
+//    }
 
 
 
