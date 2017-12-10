@@ -5,6 +5,7 @@ import rooms.Bedroom;
 import rooms.BedroomValue;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,7 +19,7 @@ public class BedroomTest {
     private int capacitySingle = BedroomValue.SINGLE.getCapacity();
     private int costDouble = BedroomValue.SINGLE.getCost();
     private int costSingle = BedroomValue.SINGLE.getCost();
-    private Guest testGuest;
+    private ArrayList<String> testGuests;
 
 
 
@@ -26,7 +27,7 @@ public class BedroomTest {
     public void before() {
         testDoubleBedroom = new Bedroom(5, capacityDouble, costDouble , typeDouble);
         testSingleBedroom = new Bedroom(4, capacitySingle, costSingle, typeSingle);
-        testGuest = new Guest("Phil", 500);
+        testGuests = new ArrayList<>(Arrays.asList("Phil", "Gal"));
     }
 
     @Test
@@ -56,11 +57,11 @@ public class BedroomTest {
         assertEquals(50, testSingleBedroom.getCost());
     }
 
-//    @Test
-//    public void canAddGuest() {
-//        testDoubleBedroom.addGuests(testGuest);
-//        assertEquals(1, testDoubleBedroom.getGuests().size());
-//    }
+    @Test
+    public void canAddGuests() {
+        testDoubleBedroom.addGuests(testGuests);
+        assertEquals(2, testDoubleBedroom.getGuests().size());
+    }
 
 
 
