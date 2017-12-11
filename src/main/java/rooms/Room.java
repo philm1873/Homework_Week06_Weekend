@@ -36,4 +36,8 @@ public class Room {
         guests.addAll(inputGuests);
     }
 
+    public void removeGuests() {
+        guests.clear();
+    }
+
 }

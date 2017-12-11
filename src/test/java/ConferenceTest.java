@@ -49,4 +49,12 @@ public class ConferenceTest {
         assertEquals(2, testConferenceRoom.getGuests().size());
     }
 
+    @Test
+    public void canRemoveGuests() {
+        testConferenceRoom.addGuests(testGuests);
+        assertEquals(2, testConferenceRoom.getGuests().size());
+        testConferenceRoom.removeGuests();
+        assertEquals(0, testConferenceRoom.getGuests().size());
+    }
+
 }
