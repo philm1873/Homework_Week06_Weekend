@@ -1,10 +1,14 @@
 package hotel;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Hotel {
     private String name;
-    private HashMap floors;
+    private ArrayList<Floor> floors;
 
-    public Hotel(String inputName, HashMap<Integer, )
+    public Hotel(String inputName, ArrayList<Floor> inputFloors) {
+        this.name = inputName;
+        this.floors = inputFloors;
+    }
 }

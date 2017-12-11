@@ -26,16 +26,19 @@ public class RoomTest {
 
     @Test
     public void canGetRoomNumber() {
+
         assertEquals(1, testRoom.getRoomNumber());
     }
 
     @Test
     public void canGetCapacity() {
+
         assertEquals(2, testRoom.getCapacity());
     }
 
     @Test
     public void canGetCost() {
+
         assertEquals(50, testRoom.getCost());
     }
 

@@ -7,11 +7,13 @@ import rooms.Suite;
 import java.util.ArrayList;
 
 public class Floor {
+    int floorNumber;
     ArrayList<Bedroom> bedrooms;
     ArrayList<Conference> conferenceRooms;
     ArrayList<Suite> suites;
 
-    public Floor() {
+    public Floor(int inputFloorNumber) {
+        this.floorNumber = inputFloorNumber;
         bedrooms = new ArrayList<>();
         conferenceRooms = new ArrayList<>();
         suites = new ArrayList<>();
@@ -27,5 +29,17 @@ public class Floor {
 
     public void addSuite(Suite inputSuite) {
         suites.add(inputSuite);
+    }
+
+    public ArrayList<Conference> getConferenceRooms() {
+        return conferenceRooms;
+    }
+
+    public ArrayList<Bedroom> getBedrooms() {
+        return bedrooms;
+    }
+
+    public ArrayList<Suite> getSuites() {
+        return suites;
     }
 }
